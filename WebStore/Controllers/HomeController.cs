@@ -1,10 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using WebStore.Infrastructure.Filters;
 
 namespace WebStore.Controllers
 {
     public class HomeController : Controller
     {
         
+        [AddHeader("Test", "HeaderValue")]
         public IActionResult Index()
         {
             return View();
